@@ -2,7 +2,7 @@
 
 **Ders:** Derin Öğrenme / Computer Vision Ödevi
 
-**Öğrenci:** [Ad Soyad / Numara]
+**Öğrenci:** Ahmet KARGI
 
 ---
 
@@ -13,7 +13,7 @@
 | **Project Title** | Ev Eşyası Tespiti: YOLOv8s ile COCO 2017 Alt Kümesi Üzerinde Nesne Tespiti |
 | **Problem / Task** | Nesne tespiti (object detection): fotoğraftaki 9 ev eşyası sınıfının konumunu (sınırlayıcı kutu) ve sınıfını bulmak |
 | **Dataset** | COCO 2017, 9 sınıflık alt küme: bottle, wine glass, cup, fork, spoon, orange, chair, couch, book. Train: 8800 görüntü (train2017; 800'ü etiketsiz negatif), Val: 679, Test: 679 (val2017 ikiye bölündü) |
-| **Dataset URL** | https://cocodataset.org/#download |
+| **Dataset URL** | <https://cocodataset.org/#download> |
 | **Model Architecture** | YOLOv8s (Ultralytics), COCO üzerinde önceden eğitilmiş ağırlıklardan fine-tuning. CSPDarknet (C2f) omurga + PAN-FPN boyun + anchor-free ayrık başlık; 11,1 M parametre, 28,7 GFLOPs |
 | **Input Size** | 640 × 640 × 3 (RGB, letterbox) |
 | **Hyperparameters** | Epoch: 20, batch size: 16, lr0: 0.001 → 0.00001 (kosinüs), weight decay: 0.0005, warmup: 3 epoch (warmup_bias_lr = 0), AMP (FP16), seed: 42 |
@@ -25,7 +25,7 @@
 | **Best Performance** | Test kümesi: mAP@0.5 = 0.425, mAP@0.5:0.95 = 0.287, Precision = 0.521, Recall = 0.424, F1 = 0.468, ortalama IoU = 0.839. Telefon fotoğrafları: 7 fotoğrafın 6'sında tam başarı |
 | **Inference Time** | GPU (RTX 4060): 12,8 ms/görüntü (≈ 78 FPS); CPU: 130 ms/görüntü |
 | **Deployment Technology** | Gradio 6 (fotoğraf yükleme, kamera, eşik ayarı, renk filtresi seçeneği) |
-| **Repository** | [GitHub linki] |
+| **Repository** | <https://github.com/Ahmetkarg0/ev-esyasi-tespiti-yolov8> |
 
 ---
 
