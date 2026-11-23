@@ -1,0 +1,192 @@
+{
+  "overall": {
+    "precision": 0.5215,
+    "recall": 0.4238,
+    "f1": 0.4676,
+    "mAP50": 0.425,
+    "mAP50_95": 0.2873,
+    "at_conf_0.25": {
+      "precision": 0.5474,
+      "recall": 0.4082,
+      "f1": 0.4677,
+      "mean_IoU": 0.8394,
+      "TP": 1247,
+      "FP": 1031,
+      "FN": 1808
+    }
+  },
+  "per_class": {
+    "bottle": {
+      "precision": 0.5894,
+      "recall": 0.5032,
+      "f1": 0.5429,
+      "mAP50": 0.5144,
+      "mAP50_95": 0.3489,
+      "at_conf_0.25": {
+        "precision": 0.6188,
+        "recall": 0.5075,
+        "f1": 0.5576,
+        "mean_IoU": 0.8468,
+        "TP": 237,
+        "FP": 146,
+        "FN": 230
+      }
+    },
+    "wine glass": {
+      "precision": 0.6225,
+      "recall": 0.5375,
+      "f1": 0.5769,
+      "mAP50": 0.4946,
+      "mAP50_95": 0.3398,
+      "at_conf_0.25": {
+        "precision": 0.6202,
+        "recall": 0.5,
+        "f1": 0.5536,
+        "mean_IoU": 0.847,
+        "TP": 80,
+        "FP": 49,
+        "FN": 80
+      }
+    },
+    "cup": {
+      "precision": 0.6199,
+      "recall": 0.5775,
+      "f1": 0.5979,
+      "mAP50": 0.6053,
+      "mAP50_95": 0.4469,
+      "at_conf_0.25": {
+        "precision": 0.6392,
+        "recall": 0.5775,
+        "f1": 0.6068,
+        "mean_IoU": 0.8657,
+        "TP": 287,
+        "FP": 162,
+        "FN": 210
+      }
+    },
+    "fork": {
+      "precision": 0.5032,
+      "recall": 0.3776,
+      "f1": 0.4314,
+      "mAP50": 0.3884,
+      "mAP50_95": 0.2598,
+      "at_conf_0.25": {
+        "precision": 0.4706,
+        "recall": 0.3265,
+        "f1": 0.3855,
+        "mean_IoU": 0.8389,
+        "TP": 32,
+        "FP": 36,
+        "FN": 66
+      }
+    },
+    "spoon": {
+      "precision": 0.4876,
+      "recall": 0.2595,
+      "f1": 0.3387,
+      "mAP50": 0.2438,
+      "mAP50_95": 0.1302,
+      "at_conf_0.25": {
+        "precision": 0.4795,
+        "recall": 0.2215,
+        "f1": 0.303,
+        "mean_IoU": 0.805,
+        "TP": 35,
+        "FP": 38,
+        "FN": 123
+      }
+    },
+    "orange": {
+      "precision": 0.4603,
+      "recall": 0.3636,
+      "f1": 0.4063,
+      "mAP50": 0.3327,
+      "mAP50_95": 0.254,
+      "at_conf_0.25": {
+        "precision": 0.4242,
+        "recall": 0.3182,
+        "f1": 0.3636,
+        "mean_IoU": 0.9052,
+        "TP": 42,
+        "FP": 57,
+        "FN": 90
+      }
+    },
+    "chair": {
+      "precision": 0.5052,
+      "recall": 0.4486,
+      "f1": 0.4752,
+      "mAP50": 0.4423,
+      "mAP50_95": 0.2761,
+      "at_conf_0.25": {
+        "precision": 0.5287,
+        "recall": 0.4311,
+        "f1": 0.4749,
+        "mean_IoU": 0.8175,
+        "TP": 369,
+        "FP": 329,
+        "FN": 487
+      }
+    },
+    "couch": {
+      "precision": 0.5551,
+      "recall": 0.5693,
+      "f1": 0.5621,
+      "mAP50": 0.5983,
+      "mAP50_95": 0.4335,
+      "at_conf_0.25": {
+        "precision": 0.5649,
+        "recall": 0.5401,
+        "f1": 0.5522,
+        "mean_IoU": 0.8725,
+        "TP": 74,
+        "FP": 57,
+        "FN": 63
+      }
+    },
+    "book": {
+      "precision": 0.3504,
+      "recall": 0.1775,
+      "f1": 0.2357,
+      "mAP50": 0.2056,
+      "mAP50_95": 0.0968,
+      "at_conf_0.25": {
+        "precision": 0.3669,
+        "recall": 0.1655,
+        "f1": 0.2281,
+        "mean_IoU": 0.7761,
+        "TP": 91,
+        "FP": 157,
+        "FN": 459
+      }
+    }
+  },
+  "orange_color_filter": {
+    "without": {
+      "precision": 0.4242,
+      "recall": 0.3182,
+      "f1": 0.3636,
+      "mean_IoU": 0.9052,
+      "TP": 42,
+      "FP": 57,
+      "FN": 90
+    },
+    "with": {
+      "precision": 0.427,
+      "recall": 0.2879,
+      "f1": 0.3439,
+      "mean_IoU": 0.9028,
+      "TP": 38,
+      "FP": 51,
+      "FN": 94
+    }
+  },
+  "inference_ms_per_image_gpu": {
+    "preprocess": 1.04,
+    "inference": 10.43,
+    "postprocess": 1.35,
+    "total": 12.82
+  },
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "inference_ms_per_image_cpu": 130.1
+}

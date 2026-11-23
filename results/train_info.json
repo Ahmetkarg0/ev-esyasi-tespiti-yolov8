@@ -1,0 +1,30 @@
+{
+  "train_time_sec": 3584.1,
+  "train_time_human": "00:59:44",
+  "epochs_completed": 20,
+  "best_epoch": 20,
+  "best_val_mAP50": 0.4387,
+  "best_val_mAP50_95": 0.2905,
+  "thermal_pause_sec": 988.6,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch": "2.6.0+cu124",
+  "python": "3.10.0",
+  "hyperparameters": {
+    "model": "yolov8s.pt",
+    "imgsz": 640,
+    "epochs": 20,
+    "batch": 16,
+    "optimizer": "AdamW",
+    "lr0": 0.001,
+    "lrf": 0.01,
+    "cos_lr": true,
+    "momentum": 0.937,
+    "weight_decay": 0.0005,
+    "warmup_epochs": 3,
+    "warmup_bias_lr": 0.0,
+    "patience": 10,
+    "seed": 42,
+    "workers": 4,
+    "amp": true
+  }
+}

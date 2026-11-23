@@ -1,0 +1,149 @@
+[
+  {
+    "dosya": "bardak_kupa.jpg",
+    "aciklama": "Cam bardak ve seramik kupa",
+    "beklenen": "cup ×2",
+    "ham_tahmin": "cup ×2",
+    "tahmin": "cup ×2",
+    "renk_filtresi_eledi": 0,
+    "durum_ham": "Başarılı",
+    "durum": "Başarılı",
+    "sure_ms": 61.6,
+    "tespitler": [
+      {
+        "sinif": "cup",
+        "guven": 0.91
+      },
+      {
+        "sinif": "cup",
+        "guven": 0.869
+      }
+    ]
+  },
+  {
+    "dosya": "kasik_catal.jpg",
+    "aciklama": "Granit tezgâhta metal kaşık ve çatal",
+    "beklenen": "spoon ×1, fork ×1",
+    "ham_tahmin": "fork ×1",
+    "tahmin": "fork ×1",
+    "renk_filtresi_eledi": 0,
+    "durum_ham": "Başarısız",
+    "durum": "Başarısız",
+    "sure_ms": 11.5,
+    "tespitler": [
+      {
+        "sinif": "fork",
+        "guven": 0.277
+      }
+    ]
+  },
+  {
+    "dosya": "kitaplar.jpg",
+    "aciklama": "Masada üst üste kitaplar ve defterler",
+    "beklenen": "book ×2+",
+    "ham_tahmin": "book ×6",
+    "tahmin": "book ×6",
+    "renk_filtresi_eledi": 0,
+    "durum_ham": "Başarılı",
+    "durum": "Başarılı",
+    "sure_ms": 11.6,
+    "tespitler": [
+      {
+        "sinif": "book",
+        "guven": 0.616
+      },
+      {
+        "sinif": "book",
+        "guven": 0.445
+      },
+      {
+        "sinif": "book",
+        "guven": 0.331
+      },
+      {
+        "sinif": "book",
+        "guven": 0.327
+      },
+      {
+        "sinif": "book",
+        "guven": 0.318
+      },
+      {
+        "sinif": "book",
+        "guven": 0.274
+      }
+    ]
+  },
+  {
+    "dosya": "koltuk.jpg",
+    "aciklama": "Gri kumaş kanepe, üzerinde yeşil yastıklar",
+    "beklenen": "couch ×1",
+    "ham_tahmin": "couch ×1",
+    "tahmin": "couch ×1",
+    "renk_filtresi_eledi": 0,
+    "durum_ham": "Başarılı",
+    "durum": "Başarılı",
+    "sure_ms": 9.5,
+    "tespitler": [
+      {
+        "sinif": "couch",
+        "guven": 0.617
+      }
+    ]
+  },
+  {
+    "dosya": "meyveler.jpg",
+    "aciklama": "İki portakal ve bir kivi (kivi COCO'da yok)",
+    "beklenen": "orange ×2",
+    "ham_tahmin": "orange ×3",
+    "tahmin": "orange ×2",
+    "renk_filtresi_eledi": 1,
+    "durum_ham": "Kısmen başarılı",
+    "durum": "Başarılı",
+    "sure_ms": 10.6,
+    "tespitler": [
+      {
+        "sinif": "orange",
+        "guven": 0.9
+      },
+      {
+        "sinif": "orange",
+        "guven": 0.836
+      }
+    ]
+  },
+  {
+    "dosya": "sandalye.jpg",
+    "aciklama": "Kahverengi deri, krom ayaklı sandalye",
+    "beklenen": "chair ×1",
+    "ham_tahmin": "chair ×1",
+    "tahmin": "chair ×1",
+    "renk_filtresi_eledi": 0,
+    "durum_ham": "Başarılı",
+    "durum": "Başarılı",
+    "sure_ms": 10.4,
+    "tespitler": [
+      {
+        "sinif": "chair",
+        "guven": 0.398
+      }
+    ]
+  },
+  {
+    "dosya": "sise.jpg",
+    "aciklama": "Mutfak tezgâhında şeffaf plastik su şişesi",
+    "beklenen": "bottle ×1",
+    "ham_tahmin": "bottle ×1",
+    "tahmin": "bottle ×1",
+    "renk_filtresi_eledi": 0,
+    "durum_ham": "Başarılı",
+    "durum": "Başarılı",
+    "sure_ms": 10.6,
+    "tespitler": [
+      {
+        "sinif": "bottle",
+        "guven": 0.958
+      }
+    ]
+  }
+]

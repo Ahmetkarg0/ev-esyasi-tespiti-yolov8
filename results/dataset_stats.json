@@ -1,0 +1,45 @@
+{
+  "train": {
+    "images": 8800,
+    "negatives": 800,
+    "instances": {
+      "bottle": 6451,
+      "wine glass": 2693,
+      "cup": 5635,
+      "fork": 1503,
+      "spoon": 1651,
+      "orange": 3198,
+      "chair": 9663,
+      "couch": 1443,
+      "book": 5975
+    }
+  },
+  "val": {
+    "images": 679,
+    "instances": {
+      "bottle": 546,
+      "wine glass": 181,
+      "cup": 398,
+      "fork": 117,
+      "spoon": 95,
+      "orange": 153,
+      "chair": 915,
+      "couch": 124,
+      "book": 579
+    }
+  },
+  "test": {
+    "images": 679,
+    "instances": {
+      "bottle": 467,
+      "wine glass": 160,
+      "cup": 497,
+      "fork": 98,
+      "spoon": 158,
+      "orange": 132,
+      "chair": 856,
+      "couch": 137,
+      "book": 550
+    }
+  }
+}
