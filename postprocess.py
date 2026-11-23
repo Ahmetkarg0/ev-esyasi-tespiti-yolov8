@@ -1,15 +1,9 @@
-"""Tahmin sonrası renk doğrulaması.
-
-COCO'da kivi yok; model yuvarlak ve kahverengi kiviyi "orange" sanabiliyor.
-"orange" kutusunun merkezindeki piksellerin yeterli kısmı portakal renginde değilse tespit elenir.
-"""
-
 import numpy as np
 from PIL import Image
 
-ORANGE_HUE = (10, 65)      # derece (turuncu - sarı)
+ORANGE_HUE = (10, 65)
 MIN_SAT, MIN_VAL = 0.5, 0.5
-MIN_FRACTION = 0.4         # merkezdeki piksellerin en az %40'ı portakal renginde olmalı
+MIN_FRACTION = 0.4
 
 
 def orange_fraction(hsv: np.ndarray, box) -> float:
@@ -24,7 +18,6 @@ def orange_fraction(hsv: np.ndarray, box) -> float:
 
 
 def color_filter(result, image: Image.Image):
-    """Renk doğrulamasını geçemeyen "orange" tespitlerini çıkarır. (filtrelenmiş sonuç, elenen sayısı)"""
     boxes = result.boxes
     if len(boxes) == 0:
         return result, 0

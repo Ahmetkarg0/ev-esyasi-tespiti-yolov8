@@ -20,7 +20,6 @@ GPU'da 12,8 ms/görüntü. Telefon fotoğraflarında 7'de 6 başarı.
 | `app.py` | Gradio uygulaması |
 | `weights/best.pt` | Eğitilmiş model |
 | `results/` | Metrikler, grafikler, test fotoğrafı çıktıları |
-| `colab_train.ipynb` | Aynı adımları Colab'da çalıştırmak için |
 
 ## Çalıştırma
 

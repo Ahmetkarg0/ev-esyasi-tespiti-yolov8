@@ -1,8 +1,3 @@
-"""Test kümesi değerlendirmesi: P, R, F1, mAP@0.5, mAP@0.5:0.95, ortalama IoU, tahmin süresi.
-
-    python evaluate.py --data /content/coco9/coco9.yaml --cpu-timing 50
-"""
-
 import argparse
 import json
 import time
@@ -29,7 +24,6 @@ def read_gt(path: Path, w, h):
 
 
 def match(pc, pb, pf, gc, gb):
-    """Aynı sınıftaki kutuları güven sırasına göre açgözlü eşleştirir; (iou, sınıf) listesi döner."""
     out, used = [], set()
     if not len(pb) or not len(gb):
         return out
@@ -89,7 +83,6 @@ def main():
     device = 0 if torch.cuda.is_available() else "cpu"
     model = YOLO(args.weights)
 
-    # 1) mAP, P, R (Ultralytics doğrulayıcısı)
     m = model.val(data=args.data, split="test", imgsz=640, batch=16, iou=IOU_THRES, device=device,
                   plots=True, project=str(RESULTS_DIR), name="test_eval", exist_ok=True)
     box = m.box
@@ -101,7 +94,6 @@ def main():
                                           mAP50=round(float(ap50), 4), mAP50_95=round(float(ap), 4))
     mp, mr = float(box.mp), float(box.mr)
 
-    # 2) conf=0.25'te IoU ve TP/FP/FN; renk filtresiyle ve filtresiz
     cfg = yaml.safe_load(open(args.data))
     img_dir = Path(cfg["path"]) / cfg["test"]
     lbl_dir = Path(cfg["path"]) / cfg["test"].replace("images", "labels")

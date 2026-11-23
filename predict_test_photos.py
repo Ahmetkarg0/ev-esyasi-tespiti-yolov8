@@ -1,8 +1,3 @@
-"""Telefon fotoğraflarıyla test: tahminleri çizer, beklenen sonuçlarla karşılaştırır.
-
-    python predict_test_photos.py
-"""
-
 import argparse
 import json
 import math

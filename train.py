@@ -1,9 +1,3 @@
-"""YOLOv8s fine-tuning.
-
-    python train.py --data /content/coco9/coco9.yaml
-    python train.py --resume runs/yolov8s_coco9/weights/last.pt
-"""
-
 import argparse
 import csv
 import json
@@ -28,7 +22,6 @@ def gpu_temp():
 
 
 def thermal_guard(max_temp, resume_temp):
-    """Her 50 batch'te GPU sıcaklığına bakar; max_temp aşılırsa resume_temp'e inene kadar bekler."""
     state = {"n": 0, "paused": 0.0}
 
     def on_batch_end(trainer):
@@ -76,7 +69,7 @@ def main():
 
     with open(save_dir / "results.csv") as f:
         rows = [{k.strip(): v for k, v in r.items()} for r in csv.DictReader(f)]
-    if "time" in rows[-1]:  # resume edilen eğitimde toplam süre
+    if "time" in rows[-1]:
         elapsed = max(elapsed, float(rows[-1]["time"]))
     best = max(rows, key=lambda r: float(r["metrics/mAP50-95(B)"]))
 

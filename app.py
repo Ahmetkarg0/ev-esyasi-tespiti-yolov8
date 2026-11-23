@@ -1,9 +1,3 @@
-"""Gradio arayüzü.
-
-    python app.py            # http://127.0.0.1:7860
-    python app.py --share    # Colab için herkese açık link
-"""
-
 import argparse
 import time
 
@@ -16,7 +10,7 @@ from config import CLASSES, CLASSES_TR, CONF_THRES, IOU_THRES, TEST_PHOTOS_DIR, 
 from postprocess import color_filter
 
 model = YOLO(str(WEIGHTS_PATH))
-model.predict(Image.new("RGB", (640, 640)), verbose=False)  # ilk isteğin gecikmemesi için ısınma
+model.predict(Image.new("RGB", (640, 640)), verbose=False)
 COLUMNS = ["Sınıf", "Türkçe", "Güven", "Kutu (x1, y1, x2, y2)"]
 
 

@@ -28,7 +28,7 @@ TRAIN_CFG = dict(
     momentum=0.937,
     weight_decay=0.0005,
     warmup_epochs=3,
-    warmup_bias_lr=0.0,  # varsayılan 0.1 AdamW ile ön eğitimli ağırlıkları bozuyor
+    warmup_bias_lr=0.0,
     patience=10,
     seed=42,
     workers=2,
@@ -37,7 +37,7 @@ TRAIN_CFG = dict(
 
 CONF_THRES = 0.25
 IOU_THRES = 0.7     # NMS
-MATCH_IOU = 0.5     # tahmin-gerçek eşleştirme
+MATCH_IOU = 0.5
 
 WEIGHTS_PATH = PROJECT_DIR / "weights" / "best.pt"
 RESULTS_DIR = PROJECT_DIR / "results"

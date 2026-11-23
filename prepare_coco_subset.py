@@ -1,11 +1,3 @@
-"""COCO 2017'den 9 sınıflık YOLO veri seti hazırlar.
-
-train: train2017 (+ portakala benzeyen nesnelerden etiketsiz zor negatifler)
-val/test: val2017 alt kümesinin iki yarısı (ön eğitimde görülmemiş görüntüler)
-
-    python prepare_coco_subset.py --out D:/coco9 --max-train 8000 --negatives 800
-"""
-
 import argparse
 import json
 import random
@@ -19,7 +11,6 @@ from pathlib import Path
 from config import CLASSES, RESULTS_DIR
 
 ANN_URL = "http://images.cocodataset.org/annotations/annotations_trainval2017.zip"
-# Portakalla karışabilecek, veri setimizde olmayan COCO sınıfları
 NEGATIVE_CLASSES = ["apple", "banana", "carrot", "broccoli", "donut", "sports ball", "cake"]
 
 
@@ -55,7 +46,6 @@ def get_annotations(root: Path):
 
 
 def load_subset(json_path: Path):
-    """Seçili sınıfların YOLO etiketlerini ve her görüntüdeki tüm COCO sınıflarını döndürür."""
     print(f"Okunuyor: {json_path.name}")
     data = json.loads(json_path.read_text())
     id2name = {c["id"]: c["name"] for c in data["categories"]}
@@ -80,7 +70,6 @@ def load_subset(json_path: Path):
 
 
 def select_train(cls_in_img, max_n, seed):
-    """Her sınıf için en az max_n/9 görüntü olacak şekilde dengeli seçim yapar."""
     ids = list(cls_in_img)
     if max_n <= 0 or len(ids) <= max_n:
         return ids
@@ -102,7 +91,6 @@ def select_train(cls_in_img, max_n, seed):
 
 
 def select_negatives(all_cats, n, seed):
-    """Veri setimizdeki hiçbir sınıfı içermeyen, portakala benzer nesneli görüntüler."""
     ours = set(CLASSES)
     ids = [i for i, cats in all_cats.items() if cats & set(NEGATIVE_CLASSES) and not cats & ours]
     random.Random(seed).shuffle(ids)
@@ -114,7 +102,7 @@ def write_split(split, ids, images, labels, out: Path, threads):
     img_dir.mkdir(parents=True, exist_ok=True)
     lbl_dir.mkdir(parents=True, exist_ok=True)
     keep = {Path(images[i]["file_name"]).stem for i in ids}
-    for p in list(img_dir.iterdir()) + list(lbl_dir.iterdir()):  # önceki çalıştırmadan kalanlar
+    for p in list(img_dir.iterdir()) + list(lbl_dir.iterdir()):
         if p.stem not in keep:
             p.unlink()
     print(f"[{split}] {len(ids)} görüntü indiriliyor...")
@@ -126,7 +114,7 @@ def write_split(split, ids, images, labels, out: Path, threads):
                 ok.append(futs[f])
             if k % 1000 == 0:
                 print(f"  {k}/{len(ids)}")
-    for i in ok:  # negatif görüntüler boş etiket dosyası alır
+    for i in ok:
         (lbl_dir / f"{Path(images[i]['file_name']).stem}.txt").write_text("\n".join(labels.get(i, [])))
     if len(ok) < len(ids):
         print(f"  Uyarı: {len(ids) - len(ok)} görüntü indirilemedi.")
